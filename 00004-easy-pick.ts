@@ -25,4 +25,4 @@ interface Expected2 {
 
 
 // ============= Your Code Here =============
-type MyPick<T, K extends keyof T> = { [k in K]: T[k]}
+type MyPick<T, K extends keyof T> = { [k in K]: T[k] }
