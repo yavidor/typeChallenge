@@ -10,4 +10,5 @@ type cases = [
 
 
 // ============= Your Code Here =============
-type LengthOfString<S extends string> = any
+type s2r<S extends string> = S extends `${infer A}${infer B}` ? [A, ...s2r<B>] : [];
+type LengthOfString<S extends string> = s2r<S>["length"]
