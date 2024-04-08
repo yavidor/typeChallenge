@@ -15,4 +15,4 @@ type cases = [
 
 
 // ============= Your Code Here =============
-declare function PromiseAll(values: any): any
+declare function PromiseAll<T extends any[]>(values: readonly [...T]): Promise<{ [K in keyof T]: Awaited<T[K]> }> 
